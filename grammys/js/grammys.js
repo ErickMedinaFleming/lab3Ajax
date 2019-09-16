@@ -6,12 +6,8 @@ $.ajax({
 
 		let newHtml = ''
 
-		for(let i = 0; i < data.length ; i++) {
-			newHtml += `
-				<option value="${data[i].field_id}">
-					${data[i].field}
-				</option>
-				`
+		for(let i = 0; i < data.fields.length ; i++) {
+			newHtml += `<option value="${data.fields[i].field_id}">${data.fields[i].field}</option>`
 		}
 		$('#category_types').append(newHtml)
 		//loadDatos()
