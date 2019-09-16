@@ -6,7 +6,7 @@ $.ajax({
 
 		let newHtml = ''
 
-		for(let i = 0; i < data.length; i++) {
+		for(let i = 0; i < data.length ; i++) {
 			newHtml += `
 				<option value="${data[i].field_id}">
 					${data[i].field}
@@ -14,13 +14,13 @@ $.ajax({
 				`
 		}
 		$('#category_types').append(newHtml)
-		loadDatos()
+		//loadDatos()
 	},
 	error : function(errorMsg) {
 		console.log("NOT LOADING")
 	}
 })
-
+/*
 function loadDatos(){
 	url : 'https://erickmedinafleming.github.io/lab3Ajax/grammys/data/grammys.json',
 	type : 'GET',
